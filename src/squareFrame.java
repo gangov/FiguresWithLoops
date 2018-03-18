@@ -13,16 +13,32 @@ public class squareFrame {
                 // first and last row
                 if (row == 0 || row == side) {
                     if (col == 0 || col == side) {
-                        System.out.print("+");
+                        if (col == 0) {
+                            System.out.print("+ ");
+                        } else {
+                            System.out.print("+");
+                        }
                     } else if (col > 0 && col < side){
-                        System.out.print("-");
+                        if (col > 0) {
+                            System.out.print("- ");
+                        } else {
+                            System.out.print("-");
+                        }
                     }
                   // any other row
                 }  if (row > 0 && row < side){
-                    if (col == 0 || col <= side) {
-                        System.out.print("|");
+                    if (col == 0 || col == side) {
+                        if (col == 0) {
+                            System.out.print("| ");
+                        } else {
+                            System.out.print("|");
+                        }
                     } else if (col != 0 && col < side) {
-                        System.out.print("-");
+                        if (col != 0) {
+                            System.out.print("- ");
+                        } else {
+                            System.out.print("- ");
+                        }
                     }
                 }
             }
