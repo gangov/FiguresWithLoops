@@ -1,3 +1,5 @@
+import javafx.css.Size;
+
 import java.util.Scanner;
 
 public class diamond {
@@ -19,8 +21,20 @@ public class diamond {
 
         int size = Integer.parseInt(scan.nextLine());
 
-        for (int row = 1; row <= size; row++) {
-
+        if (size % 2 != 0) {
+            for (int rowOdd = 1; rowOdd <= size; rowOdd++) {
+                System.out.print(repeatMe("-", (size - rowOdd) / 2));
+                System.out.print(repeatMe("*", rowOdd));
+                System.out.print(repeatMe("-", (size - rowOdd) / 2));
+                System.out.println();
+            }
+        } else {
+            for (int rowEven = 1; rowEven <= size - 1; rowEven++) {
+                System.out.print(repeatMe("-", (size - 1) / 2));
+                System.out.print(repeatMe("**", 1));
+                System.out.print(repeatMe("-", (size - 1) / 2));
+                System.out.println();
+            }
         }
     }
 }
